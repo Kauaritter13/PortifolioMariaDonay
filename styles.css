@@ -39,7 +39,6 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
-    animation: slideDown 1s ease-out;
 }
 
 header .container {
@@ -74,7 +73,7 @@ nav ul li a:hover {
 
 /* Seção Hero */
 #hero {
-    background: url('hero-bg.jpg');
+    background: url('hero-bg.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -87,13 +86,11 @@ nav ul li a:hover {
 #hero h2 {
     font-size: 3em;
     margin-bottom: 20px;
-    animation: fadeInDown 1s ease-out;
 }
 
 #hero p {
     font-size: 1.2em;
     margin-bottom: 30px;
-    animation: fadeInUp 1s ease-out;
 }
 
 .btn {
@@ -109,14 +106,13 @@ nav ul li a:hover {
 }
 
 .btn:hover {
-    background: darken(var(--cor-primaria), 10%);
+    background: #e65c50; /* Cor escurecida */
 }
 
 /* Seções */
 section {
     padding: 80px 0;
     min-height: 100vh;
-    animation: fadeIn 2s ease-in;
 }
 
 #sobre {
@@ -149,151 +145,84 @@ section h2::after {
     height: 4px;
     background: var(--cor-primaria);
     display: block;
-    margin: 10px auto 0;
-    border-radius: 2px;
+    margin: 20px auto 0;
 }
 
-/* Sobre Mim */
-#sobre-conteudo {
+/* Sobre mim */
+.sobre-conteudo {
     display: flex;
     align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
 }
 
-#sobre-conteudo img {
+.sobre-conteudo img {
     width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-}
-
-#sobre-conteudo img:hover {
-    transform: scale(1.05);
+    height: auto;
+    border-radius: 50%;
+    margin-right: 20px;
 }
 
 .sobre-texto {
     flex: 1;
 }
 
-.sobre-texto p {
-    margin-bottom: 15px;
-    font-size: 1.1em;
-}
-
 /* Portfólio */
 .portfolio-container {
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
 }
 
 .card {
     background: var(--cor-branca);
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    overflow: hidden;
-    width: 300px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(30% - 40px);
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }
 
 .card img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    border-radius: 8px;
 }
 
-.card h3 {
-    text-align: center;
-    margin: 15px 0;
-}
-
-.card p {
-    padding: 0 15px 15px;
-    text-align: center;
-}
-
-.card .btn {
-    display: block;
-    margin: 0 auto 15px;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
-}
-
-/* Testemunhos */
 .testemunhos-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .testemunho {
-    background: var(--cor-fundo);
-    border-left: 5px solid var(--cor-primaria);
+    background: var(--cor-branca);
+    border-radius: 8px;
     padding: 20px;
-    width: 300px;
-    border-radius: 5px;
-    transition: transform 0.3s;
-}
-
-.testemunho:hover {
-    transform: translateY(-5px);
-}
-
-.testemunho p {
-    font-style: italic;
-    margin-bottom: 15px;
-}
-
-.testemunho h4 {
-    text-align: right;
-    color: var(--cor-secundaria);
+    margin: 10px 0;
+    width: 80%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Formulário de Contato */
 form {
-    max-width: 600px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 form label {
-    margin: 10px 0 5px;
-    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 form input, form textarea {
     padding: 10px;
-    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    border: 1px solid var(--cor-secundaria);
     border-radius: 5px;
-    transition: border-color 0.3s;
-}
-
-form input:focus, form textarea:focus {
-    border-color: var(--cor-primaria);
-    outline: none;
-}
-
-form button {
-    margin-top: 15px;
-    padding: 10px;
-    border: none;
-    background: var(--cor-primaria);
-    color: var(--cor-branca);
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-    font-weight: bold;
-}
-
-form button:hover {
-    background: darken(var(--cor-primaria), 10%);
 }
 
 /* Rodapé */
@@ -304,114 +233,40 @@ footer {
     padding: 20px 0;
 }
 
-footer .social {
-    margin-top: 10px;
-}
-
-footer .social a {
-    color: var(--cor-branca);
-    margin: 0 10px;
-    font-size: 1.5em;
-    transition: color 0.3s;
-}
-
-footer .social a:hover {
-    color: var(--cor-primaria);
-}
-
-/* Animações */
-@keyframes slideDown {
-    from {
-        top: -100px;
-    }
-    to {
-        top: 0;
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 /* Responsividade */
-@media (max-width: 992px) {
-    #sobre-conteudo {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #sobre-conteudo img {
-        width: 80%;
-    }
-}
-
 @media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     nav ul {
         flex-direction: column;
-        background: var(--cor-secundaria);
-        position: absolute;
-        top: 60px;
-        left: -100%;
-        width: 100%;
-        transition: left 0.3s;
-    }
-
-    nav ul.active {
-        left: 0;
     }
 
     nav ul li {
-        margin: 20px 0;
-        text-align: center;
+        margin: 10px 0;
     }
 
-    header .container {
-        flex-direction: column;
+    #hero h2 {
+        font-size: 2.5em;
     }
 
-    .portfolio-container, .testemunhos-container {
+    .portfolio-container {
         flex-direction: column;
         align-items: center;
     }
-}
 
-/* Botão responsivo para o menu */
-.menu-btn {
-    display: none;
-    cursor: pointer;
-}
+    .card {
+        width: 90%;
+    }
 
-@media (max-width: 768px) {
-    .menu-btn {
-        display: block;
-        font-size: 1.5em;
-        color: var(--cor-branca);
+    .sobre-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-conteudo img {
+        margin: 0 0 20px;
     }
 }
