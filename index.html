@@ -5,75 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maria Donay | Criadora UGC</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            color: #333;
-            background-color: #f7f7f7;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
         }
-        header {
-            background-color: #ffe6e6;
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
             padding: 20px;
+        }
+
+        header {
             text-align: center;
+            padding: 30px 0;
+            background-color: #ffe6e6;
         }
-        header h1 {
-            margin: 0;
-            color: #ff6666;
-        }
+
         header h1 a {
             color: #ff6666;
             text-decoration: none;
+            font-size: 2.5em;
+            transition: color 0.3s ease;
         }
-        section {
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 20px;
+
+        header h1 a:hover {
+            color: #ff4d4d;
+        }
+
+        .about {
             background-color: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        h2 {
-            color: #ff6666;
-            text-align: center;
-        }
-        p {
-            text-align: center;
-        }
-        .photos {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-        .photos img {
-            width: 30%;
+            padding: 30px;
+            margin: 20px 0;
             border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .about h2 {
+            color: #ff6666;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .about p {
+            font-size: 1em;
+            color: #555;
+            text-align: center;
+        }
+
+        .portfolio {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .portfolio img {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio img:hover {
+            transform: scale(1.05);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #888;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1><a href="#top" onclick="scrollToTop()">Maria Donay</a></h1>
-    </header>
+    <div class="container">
+        <header>
+            <h1><a href="#top" onclick="scrollToTop()">Maria Donay</a></h1>
+        </header>
 
-    <section id="about">
-        <h2>Oi, eu sou a Maria Donay!</h2>
-        <p>
-            Tenho 19 anos e sou uma criadora de UGC (User Generated Content) apaixonada pelo poder que os conteúdos autênticos têm de conectar marcas e pessoas. Estou apenas começando minha jornada como criadora, mas já estou animada para fazer parcerias incríveis e levar autenticidade para cada projeto!
-        </p>
-    </section>
+        <section id="about" class="about">
+            <h2>Oi, eu sou a Maria Donay!</h2>
+            <p>Tenho 19 anos e sou uma criadora de UGC apaixonada pela autenticidade e pelo impacto que posso causar ao conectar marcas e pessoas. Estou no início da minha jornada, mas super animada para aprender, crescer e criar conteúdos incríveis!</p>
+        </section>
 
-    <section id="portfolio">
-        <h2>Meu Trabalho</h2>
-        <div class="photos">
-            <!-- Coloque a imagem de uma foto posada com um produto aqui -->
-            <img src="foto_produto.jpg" alt="Foto com produto">
-            <!-- Coloque a imagem de uma foto casual, espontânea, mostrando lifestyle aqui -->
-            <img src="foto_lifestyle.jpg" alt="Foto estilo de vida">
-            <!-- Coloque a imagem de uma foto criativa para mostrar versatilidade aqui -->
-            <img src="foto_criativa.jpg" alt="Foto criativa">
-        </div>
-    </section>
+        <section class="portfolio">
+            <!-- Imagem de produto -->
+            <img src="foto_produto.jpg" alt="Foto com produto" title="Foto com produto">
+            <!-- Imagem de lifestyle -->
+            <img src="foto_lifestyle.jpg" alt="Foto estilo de vida" title="Foto estilo de vida">
+            <!-- Imagem criativa -->
+            <img src="foto_criativa.jpg" alt="Foto criativa" title="Foto criativa">
+        </section>
+
+        <footer class="footer">
+            <p>© 2024 Maria Donay. Todos os direitos reservados.</p>
+        </footer>
+    </div>
 
     <script>
         function scrollToTop() {
