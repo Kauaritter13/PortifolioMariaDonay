@@ -1,125 +1,84 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio - [Seu Nome]</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Link para ícones (opcional) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTTXRNcLygGcj3e6HDe5kq9bQ0qzZJ6oIBhN1cXwK8vhSdh6Vn3U5C3I7xvRbB7LhL8d3S4oQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Maria Donay | Criadora UGC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ffe6e6;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            color: #ff6666;
+        }
+        header h1 a {
+            color: #ff6666;
+            text-decoration: none;
+        }
+        section {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h2 {
+            color: #ff6666;
+            text-align: center;
+        }
+        p {
+            text-align: center;
+        }
+        .photos {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .photos img {
+            width: 30%;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>[Seu Nome]</h1>
-            <nav>
-                <ul>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#trabalhos">Trabalhos</a></li>
-                    <li><a href="#testemunhos">Testemunhos</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1><a href="#top" onclick="scrollToTop()">Maria Donay</a></h1>
     </header>
 
-    <section id="hero">
-        <div class="container">
-            <h2>Olá! Eu sou [Seu Nome], uma Criadora de Conteúdo UGC</h2>
-            <p>Transformo ideias em conteúdo envolvente para marcas e comunidades.</p>
-            <a href="#contato" class="btn">Trabalhe Comigo</a>
+    <section id="about">
+        <h2>Oi, eu sou a Maria Donay!</h2>
+        <p>
+            Tenho 19 anos e sou uma criadora de UGC (User Generated Content) apaixonada pelo poder que os conteúdos autênticos têm de conectar marcas e pessoas. Estou apenas começando minha jornada como criadora, mas já estou animada para fazer parcerias incríveis e levar autenticidade para cada projeto!
+        </p>
+    </section>
+
+    <section id="portfolio">
+        <h2>Meu Trabalho</h2>
+        <div class="photos">
+            <!-- Coloque a imagem de uma foto posada com um produto aqui -->
+            <img src="foto_produto.jpg" alt="Foto com produto">
+            <!-- Coloque a imagem de uma foto casual, espontânea, mostrando lifestyle aqui -->
+            <img src="foto_lifestyle.jpg" alt="Foto estilo de vida">
+            <!-- Coloque a imagem de uma foto criativa para mostrar versatilidade aqui -->
+            <img src="foto_criativa.jpg" alt="Foto criativa">
         </div>
     </section>
 
-    <section id="sobre">
-        <div class="container">
-            <h2>Sobre Mim</h2>
-            <div class="sobre-conteudo">
-                <img src="assets/sua-foto.jpg" alt="Foto de [Seu Nome]">
-                <div class="sobre-texto">
-                    <p>Olá! Eu sou [Seu Nome], apaixonada por criar conteúdo autêntico e envolvente que ressoa com o público. Com experiência em [suas especialidades, ex: criação de vídeos, gerenciamento de redes sociais, fotografia], ajudo marcas a conectar-se de maneira genuína com sua audiência.</p>
-                    <p>Meu objetivo é criar conteúdo que não apenas promova produtos, mas que conte histórias e construa comunidades.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="trabalhos">
-        <div class="container">
-            <h2>Meus Trabalhos</h2>
-            <div class="portfolio-container">
-                <div class="card">
-                    <img src="assets/projeto1.jpg" alt="Projeto 1">
-                    <h3>Projeto 1</h3>
-                    <p>Descrição breve do projeto 1.</p>
-                    <a href="#" class="btn">Ver Mais</a>
-                </div>
-                <div class="card">
-                    <img src="assets/projeto2.jpg" alt="Projeto 2">
-                    <h3>Projeto 2</h3>
-                    <p>Descrição breve do projeto 2.</p>
-                    <a href="#" class="btn">Ver Mais</a>
-                </div>
-                <div class="card">
-                    <img src="assets/projeto3.jpg" alt="Projeto 3">
-                    <h3>Projeto 3</h3>
-                    <p>Descrição breve do projeto 3.</p>
-                    <a href="#" class="btn">Ver Mais</a>
-                </div>
-                <!-- Adicione mais cartões conforme necessário -->
-            </div>
-        </div>
-    </section>
-
-    <section id="testemunhos">
-        <div class="container">
-            <h2>O Que Dizem Sobre Mim</h2>
-            <div class="testemunhos-container">
-                <div class="testemunho">
-                    <p>"[Seu Nome] trouxe uma nova vida às nossas campanhas de mídia social. Seu conteúdo é sempre criativo e engajador!"</p>
-                    <h4>- Cliente 1</h4>
-                </div>
-                <div class="testemunho">
-                    <p>"Trabalhar com [Seu Nome] foi uma experiência incrível. Ela entende perfeitamente a nossa marca e o público-alvo."</p>
-                    <h4>- Cliente 2</h4>
-                </div>
-                <div class="testemunho">
-                    <p>"A criatividade e profissionalismo de [Seu Nome] fizeram toda a diferença em nosso último projeto."</p>
-                    <h4>- Cliente 3</h4>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contato">
-        <div class="container">
-            <h2>Contato</h2>
-            <form action="#" method="POST">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-
-                <button type="submit" class="btn">Enviar Mensagem</button>
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 [Seu Nome]. Todos os direitos reservados.</p>
-            <div class="social">
-                <a href="https://facebook.com/seu-perfil" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://twitter.com/seu-perfil" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://instagram.com/seu-perfil" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://linkedin.com/in/seu-perfil" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <!-- Adicione mais ícones de redes sociais conforme necessário -->
-            </div>
-        </div>
-    </footer>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
