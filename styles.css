@@ -403,17 +403,15 @@ footer .social a:hover {
 }
 
 /* Botão responsivo para o menu */
-.menu-toggle {
+.menu-btn {
     display: none;
-    font-size: 1.5em;
     cursor: pointer;
 }
 
 @media (max-width: 768px) {
-    .menu-toggle {
+    .menu-btn {
         display: block;
-        position: absolute;
-        top: 20px;
-        right: 20px;
+        font-size: 1.5em;
+        color: var(--cor-branca);
     }
 }
